@@ -7,3 +7,4 @@ def world():
 if __name__ == "__main__":
     print("hello")
     world()
+    print("added new commit")
