@@ -4,12 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo 'Cloning repo. . .'
                 git 'https://github.com/Lonestar137/jenkins-test.git'
             }
+        }
+
+        stage('Hello world'){
+          steps {
+            echo 'Hello world'
+          }
         }
         
         stage('Run Python Script') {
             steps {
+                echo 'Starting Python build . . .'
                 // Set up Python environment (if necessary)
                 // . . .
                 // Run the Python script
