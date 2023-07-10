@@ -73,7 +73,7 @@ pipeline {
 
                 // Echo the archive URL
                 def buildNumber = env.BUILD_NUMBER
-                def archiveUrl = "${env.JOB_URL}${buildNumber}/artifact/path/to/archive.zip"
+                def archiveUrl = "${env.JOB_URL}${buildNumber}/artifact/repository.tar"
                 echo "Archive URL: ${archiveUrl}"
             }
         }
