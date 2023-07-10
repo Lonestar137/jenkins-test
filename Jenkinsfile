@@ -27,10 +27,14 @@ pipeline {
         
         stage('Create Tar Archive') {
             steps {
+
                 // Create the tar archive
                 sh 'tar cf repository.tar .'
             }
         }
+
+
+
 
         stage('Publish to GitHub') {
             steps {
@@ -62,8 +66,15 @@ pipeline {
     
     post {
         always {
+            echo 'Storing archive . . .'
+
             // Archive the tar file as an artifact
             archiveArtifacts 'repository.tar'
+
+            // Echo the archive URL
+            def buildNumber = env.BUILD_NUMBER
+            def archiveUrl = "${env.JOB_URL}${buildNumber}/artifact/path/to/archive.zip"
+            echo "Archive URL: ${archiveUrl}"
         }
     }
 }
