@@ -21,7 +21,7 @@ pipeline {
                 // Set up Python environment (if necessary)
                 // . . .
                 // Run the Python script
-                sh 'python ./src/main.py'
+                sh 'python3 ./src/main.py'
             }
         }
         
