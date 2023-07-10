@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Cloning repo. . .'
-                git 'https://github.com/Lonestar137/jenkins-test.git'
+                // git 'https://github.com/Lonestar137/jenkins-test.git'
             }
         }
 
