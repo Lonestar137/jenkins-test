@@ -3,7 +3,7 @@ pipeline {
     
     stages {
         stage('Build') {
-            dir('/tmp/') {
+            steps {
                 git 'https://github.com/Lonestar137/jenkins-test.git'
             }
         }
