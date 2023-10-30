@@ -14,7 +14,7 @@ from build_tools.cmd.git import GitRepo, PythonGitRepo
 
 # @stage("Build Stage")
 def build():
-    requirements = ["pytest"]
+    requirements = ["pytest", "build-tools"]
     with Dir("test"):
         with Venv("venv", py_modules=requirements):
             GitRepo("https://github.com/Lonestar137/JustNeovim.git").clone()
