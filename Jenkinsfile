@@ -4,7 +4,7 @@ node {
 
 		script {
 			//# def test = readYaml(file: 'test.yaml')
-			def test = readJson(file: 'test.json')
+			def test = readJSON(file: 'test.json')
 			echo test
 		}
 	}
